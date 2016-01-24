@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>安徽众媒数据科技有限公司</title>
-    <link type="text/css" rel="stylesheet" href="css/contact.css">
-    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
 </head>
 <body>
 <div id="container">
@@ -24,16 +24,16 @@
     </div>
     <div class="clear"></div>
     <div id="body">
-        <span class="cinfo sjh">手机号：18255115954</span>
-        <span class="cinfo yx">邮箱：zmsjkj&126.com</span>
-        <span class="cinfo qq">QQ：1762170818</span>
-        <span class="cinfo dz">地址：合肥市高新区长江西路与科学大道交叉口5F创业园5楼</span>
+        <span class="cinfo sjh">手机号：{{ contact.mobile }}</span>
+        <span class="cinfo yx">邮箱：{{ contact.email }}</span>
+        <span class="cinfo qq">QQ：{{ contact.qq }}</span>
+        <span class="cinfo dz">地址：{{ contact.address }}</span>
     </div>
     <div class="foot_guide">
-        <div class="foot_img01"><img src="img/foot_title.png"></div>
+        <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
         <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
         <div class="foot_img02">
-            <img src="img/foot_contact.png">
+            <img src="{{ url_for('static', filename='foot_contact.png') }}">
             <div class="txt">
                 <span><a href="#">公司简介</a></span>
                 <span class="t"><a href="#">产品服务</a></span>

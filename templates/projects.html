@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>安徽众媒数据科技有限公司</title>
-    <link type="text/css" rel="stylesheet" href="css/products.css">
-    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='products.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
 
 </head>
 <body>
@@ -26,10 +26,10 @@
     <div id="body">
     </div>
     <div class="foot_guide">
-        <div class="foot_img01"><img src="img/foot_title.png"></div>
+        <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
         <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
         <div class="foot_img02">
-            <img src="img/foot_products.png">
+            <img src="{{ url_for('static', filename='foot_products.png') }}">
             <div class="txt">
                 <span><a href="#">公司简介</a></span>
                 <span class="t"><a href="#">产品服务</a></span>

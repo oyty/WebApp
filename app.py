@@ -312,7 +312,6 @@ def agency():
 @app.route('/contact')
 def contact():
     c = Contact.query.filter_by(id='1').first()
-    print c.mobile
     return render_template('contact.html', contact=c)
 
 
