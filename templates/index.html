@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安徽众媒数据科技有限公司</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+</head>
+<body>
+<div id="container">
+    <div id="header"></div>
+    <div id="body">
+        <img src="{{ url_for('static', filename='homepage_body.png') }}">
+    </div>
+    <div class="left_navigation">
+        <ul>
+            <li>
+                <div class="circle"></div>
+                <a href="{{ url_for('profile') }}">公司简介</a></li>
+            <li>
+                <div class="circle"></div>
+                <a href="">产品服务</a></li>
+            <li>
+                <div class="circle"></div>
+                <a href="">人才团队</a></li>
+            <li>
+                <div class="circle"></div>
+                <a href="">项目案例</a></li>
+            <li>
+                <div class="circle"></div>
+                <a href="">合作机构</a></li>
+            <li>
+                <div class="circle"></div>
+                <a href="">联系我们</a></li>
+        </ul>
+    </div>
+    <div id="footer"></div>
+</div>
+</body>
+</html>

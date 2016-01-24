@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安徽众媒数据科技有限公司</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+    <script type="text/javascript" rel="script" src="{{ url_for('static', filename='jquery-1.11.3.js') }}"></script>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <div class="title">
+            <p class="title_1">
+                <span class="s">-</span>
+                <span class="s1">Product Service</span><br>
+                <span class="s2">tailor the most suitable product for you</span>
+            </p>
+
+            <p class="title_2">
+                <span class="s">-</span>
+                <span class="s3">产品服务</span><br>
+                <span class="s4">为您量身打造最适合您的产品</span></p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="body">
+        <div class="cen">
+            <div class="cleft">
+                <div class="over ctgl">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='ctgl.png') }}">
+                    </a>
+                </div>
+                <div class=" over zydsf">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='zydsf.png') }}">
+                    </a>
+                </div>
+                <div class="over wycx">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='wycx.png') }}">
+                    </a>
+                </div>
+            </div>
+            <div class="cmain">
+                <div class="over scdy">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='scdy.png') }}">
+                    </a>
+
+                </div>
+                <div class="cmd">
+                    <div class="over yxzx">
+                        <a href="#">
+                            <img src="{{ url_for('static', filename='yxzx.png') }}">
+                        </a>
+                    </div>
+                    <div class="over wadl">
+                        <a href="#">
+                            <img src="{{ url_for('static', filename='wadl.png') }}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cright">
+                <div class="over mhkf">
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='mhkf.png') }}">
+                    </a>
+                </div>
+                <div class="over yqfw">
+                    <a href="#"><img src="{{ url_for('static', filename='yqfw.png') }}"></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</div>
+<script type="text/javascript" rel="script">
+    $(".over").hover(function(){
+        var width=$(this).width();
+        var height=$(this).height();
+        $(this).width(width+3);
+        $(this).height(height+3);
+    },function(){
+        var width=$(this).width();
+        var height=$(this).height();
+        $(this).width(width-3);
+        $(this).height(height-3);
+    });
+//    $(".over").hover(function(){
+//        $(this).css({'border-width':'2px','border-style':'solid','border-color':'red'});
+//    },function(){
+//        $(this).css({'border-width':'0','border-style':'none'});
+//    });
+</script>
+</body>
+</html>

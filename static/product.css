@@ -1,0 +1,41 @@
+
+#header {
+    float: left;
+    color: #4D5E6E;
+
+}
+
+/*--body--*/
+.cen {
+    margin: auto;
+    margin-top: 30px;
+    width: 940px;
+    height: 500px;
+}
+
+.cleft {
+    float: left;
+    width: 230px;
+    height: 550px;
+}
+
+.cmain{
+    float: left;
+    margin-left: 5px;
+    width:460px;
+    height: 550px;
+}
+.cright{
+    float: left;
+    margin-left: 5px;
+    width: 230px;
+    height: 550px;
+}
+.cmain .cmd .wadl{
+    float:right;
+    margin-top: -140px;
+    margin-right: -3px;
+}
+.cright .yqfw{
+    margin-top: -3px;
+}

@@ -1,0 +1,60 @@
+
+
+
+#header {
+    color: #4D5E6E;
+}
+
+#body {
+    width: 600px;
+    height: 450px;
+    margin: auto;
+    background-image: url("../img/contact_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cinfo {
+    font-size: 18px;
+    font-weight: bolder;
+    display: block;
+    width: 200px;
+    color: #4D5E6E;
+}
+
+.sjh {
+    float: left;
+    margin-top: 130px;
+    margin-left: -30px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.yx {
+    float: left;
+    margin-left: -200px;
+    margin-top: 300px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.qq {
+    float: right;
+    margin-top: 180px;
+    margin-right: -50px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.dz {
+    float: right;
+    margin-top: 300px;
+    margin-right: -160px;
+    text-align: center;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}

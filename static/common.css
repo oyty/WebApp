@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #DCDDE1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+#container {
+    margin: auto;
+    width: 1096px;
+}
+
+.title {
+    margin-top: 30px;
+}
+
+.left {
+    float: left;
+    color: #4D5E6E;
+    margin-left: 2%;
+    width: 650px;
+}
+
+.s {
+    font-size: 2em;
+}
+
+.s1 {
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.s2, .s4 {
+    display: block;
+    text-indent: 15px;
+}
+
+.s3 {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.s4 {
+    font-size: 14px;
+}
+
+/*---页脚导航---*/
+.foot_guide {
+    width: 1096px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.foot_img01{
+    float: left;
+}
+.foot_content{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 270px;
+    font-size: 14px;
+}
+.foot_img02{
+    float: left;
+    margin-top: 15px;
+}
+
+.foot_img02 .txt{
+    /*position: absolute;*/
+    font-size: 10px;
+    color: white;
+    margin-left: 25px;
+    margin-top: -15px;
+    z-index: 1;
+}
+.foot_img02 .txt a{
+    color: white;
+}
+.foot_img02 .txt .t{
+    margin-left:6px;
+}

@@ -1,0 +1,23 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+{{ super() }}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h1>后台数据管理</h1>
+            <p class="lead">
+                这是后台数据管理页面，需要登录才可以更新网站数据。<br>新注册用户请联系管理员激活账号。
+            </p>
+            {% if not current_user.is_authenticated %}
+            <p>
+                <a class="btn btn-primary" href="{{ url_for('security.login') }}">login</a>
+                <a class="btn btn-default" href="{{ url_for('security.register') }}">register</a>
+            </p>
+            {% endif %}
+            <p>
+                <a class="btn btn-primary" href="/"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock body %}
