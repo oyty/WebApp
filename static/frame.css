@@ -1,0 +1,81 @@
+
+
+
+/*shortcode*/
+.imglist-bg-white{background:#fff;border:1px solid #ccc;border-bottom:4px solid #0086E3;}
+.imglist-title{background:#333;margin:20px 0 -20px 0;padding:18px 0 0 0;font-weight:bold;color:#eee;text-align:center;}
+.imglist tr{display:block;}
+.imglist tr td div{line-height:20px;margin:18px 0 15px 0;}
+.imglist tr img{border:0;display:block;padding:0 10px 10px 10px}
+.imglist-button{background:#F8F8F8;border:1px solid #ddd;/*#eaeaea;*/border-top:none;margin-top: 0;padding: 15px 15px;overflow:hidden;text-align:center;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px;}
+.imglist-center{display:inline-block;_display:inline;_zoom:1;+display:inline;+zoom:1;}
+.imglist-button .colorbox_btn{float:left}
+.imglist-dots{overflow:hidden;padding: 10px 0 0 10px;float:left;display:inline-block;}
+.imglist-button a:focus {outline:none;}
+.colorbox_btn{display:inline-block;background:url("../images/x.gif?4") no-repeat 0 -380px;color:#888;width:190px;height:30px;}
+.colorbox_btn:hover{background-position:0 -414px;}
+.imglist-dots a{display:inline-block;height:10px;width:10px;background:url("../images/x.gif?4") no-repeat -68px -347px;margin: 0 6px;}
+.imglist-dots a:hover{background-position:-80px -347px;}
+
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill www.5icool.org
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to IE9.
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+*/
+.cboxIE6 #cboxTopLeft{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(http://www.iplaysoft.com/wp-content/themes/ips/js/colorbox/images/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+
+
+

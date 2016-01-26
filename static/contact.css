@@ -1,6 +1,3 @@
-
-
-
 #header {
     color: #4D5E6E;
 }
@@ -9,52 +6,61 @@
     width: 600px;
     height: 450px;
     margin: auto;
-    background-image: url("../img/contact_bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
+}
+
+#body .bg {
+    position: absolute;
 }
 
 .cinfo {
     font-size: 18px;
     font-weight: bolder;
+    font-family: "Adobe Heiti Std";
     display: block;
     width: 200px;
-    color: #4D5E6E;
+    color: rgb(77, 94, 110);
+    text-align: center;
 }
 
 .sjh {
-    float: left;
-    margin-top: 130px;
-    margin-left: -30px;
+    position: relative;
+    top: 70px;
+    left: -20px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .yx {
-    float: left;
-    margin-left: -200px;
-    margin-top: 300px;
+    position: relative;
+    top: 240px;
+    left: -20px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .qq {
     float: right;
-    margin-top: 180px;
-    margin-right: -50px;
+    position: relative;
+    top: 30px;
+    right: 33px;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .dz {
     float: right;
-    margin-top: 300px;
-    margin-right: -160px;
-    text-align: center;
+    position: relative;
+    top: 210px;
+    right: -180px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(45deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
+

@@ -32,12 +32,12 @@
             <img src="{{ url_for('static', filename='foot_agency.png') }}">
 
             <div class="txt">
-                <span><a href="#">公司简介</a></span>
-                <span class="t"><a href="#">产品服务</a></span>
-                <span class="t"><a href="#">人才团队</a></span>
-                <span class="t"><a href="#">项目案例</a></span>
+                <span><a href="{{ url_for('profile') }}">公司简介</a></span>
+                <span class="t"><a href="{{ url_for('product') }}">产品服务</a></span>
+                <span class="t"><a href="{{ url_for('talent') }}">人才团队</a></span>
+                <span class="t"><a href="{{ url_for('projects') }}">项目案例</a></span>
                 <span class="t"><a href="#">合作机构</a></span>
-                <span class="t"><a href="#">联系我们</a></span>
+                <span class="t"><a href="{{ url_for('contact') }}">联系我们</a></span>
             </div>
         </div>
     </div>

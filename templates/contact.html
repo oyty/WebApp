@@ -12,18 +12,19 @@
         <div class="title">
             <p class="title_1">
                 <span class="s">-</span>
-                <span class="s1">Contact us</span><br>
-                <span class="s2">tailor the most suitable product for you</span>
+                <span class="s1">{{ title.title_in_english }}</span><br>
+                <span class="s2">{{ title.subtitle_in_english }}</span>
             </p>
 
             <p class="title_2">
                 <span class="s">-</span>
-                <span class="s3">联系我们</span><br>
-                <span class="s4">为您量身打造最适合您的产品</span></p>
+                <span class="s3">{{ title.title }}</span><br>
+                <span class="s4">{{ title.subtitle }}</span></p>
         </div>
     </div>
     <div class="clear"></div>
     <div id="body">
+        <img class="bg" src="{{ url_for('static', filename='contact_bg.png') }}">
         <span class="cinfo sjh">手机号：{{ contact.mobile }}</span>
         <span class="cinfo yx">邮箱：{{ contact.email }}</span>
         <span class="cinfo qq">QQ：{{ contact.qq }}</span>
@@ -35,12 +36,12 @@
         <div class="foot_img02">
             <img src="{{ url_for('static', filename='foot_contact.png') }}">
             <div class="txt">
-                <span><a href="#">公司简介</a></span>
-                <span class="t"><a href="#">产品服务</a></span>
-                <span class="t"><a href="#">人才团队</a></span>
-                <span class="t"><a href="#">项目案例</a></span>
-                <span class="t"><a href="#">合作机构</a></span>
-                <span class="t"><a href="#">联系我们</a></span>
+                <span><a href="{{ url_for('profile') }}">公司简介</a></span>
+                <span class="t"><a href="{{ url_for('product') }}">产品服务</a></span>
+                <span class="t"><a href="{{ url_for('talent') }}">人才团队</a></span>
+                <span class="t"><a href="{{ url_for('projects') }}">项目案例</a></span>
+                <span class="t"><a href="{{ url_for('agency') }}">合作机构</a></span>
+                <span class="t"><a href="">联系我们</a></span>
             </div>
         </div>
     </div>

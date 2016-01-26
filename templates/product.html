@@ -5,94 +5,158 @@
     <title>安徽众媒数据科技有限公司</title>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='frame.css') }}">
     <script type="text/javascript" rel="script" src="{{ url_for('static', filename='jquery-1.11.3.js') }}"></script>
+    <SCRIPT type=text/javascript src="{{ url_for('static', filename='jquery.min.js') }}"></SCRIPT>
+    <SCRIPT type=text/javascript src="{{ url_for('static', filename='jquery.colorbox-min.js') }}"></SCRIPT>
+    <SCRIPT type=text/javascript src="{{ url_for('static', filename='js.js') }}"></SCRIPT>
+
+    <style type="text/css">
+        #cboxOverlay{background:url({{ url_for('static', filename='overlay.png') }}) repeat 0 0;}
+
+
+        #colorbox{}
+        #cboxTopLeft{width:21px; height:21px; background:url({{ url_for('static', filename='controls.png')}}) no-repeat
+        -100px 0;}
+        #cboxTopRight{width:21px; height:21px; background:url({{ url_for('static', filename='controls.png')}}) no-repeat
+        -129px 0;}
+        #cboxBottomLeft{width:21px; height:21px; background:url({{ url_for('static', filename='controls.png')}})
+        no-repeat -100px -29px;}
+        #cboxBottomRight{width:21px; height:21px; background:url({{ url_for('static', filename='controls.png')}})
+        no-repeat -129px -29px;}
+        #cboxMiddleLeft{width:21px; background:url({{ url_for('static', filename='controls.png')}}) left top repeat-y;}
+        #cboxMiddleRight{width:21px; background:url({{ url_for('static', filename='controls.png')}}) right top
+        repeat-y;}
+        #cboxTopCenter{height:21px; background:url({{ url_for('static', filename='border.png')}}) 0 0 repeat-x;}
+        #cboxBottomCenter{height:21px; background:url({{ url_for('static', filename='border.png')}}) 0 -29px repeat-x;}
+        #cboxContent{background:#fff; overflow:hidden;font-size: 12px;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url({{ url_for('static',
+        filename='controls.png')}}) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious.hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url({{ url_for('static',
+        filename='controls.png')}}) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext.hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url({{ url_for('static', filename='loading_background.png')}}) no-repeat center
+        center;}
+        #cboxLoadingGraphic{background:url({{ url_for('static', filename='loading.png')}}) no-repeat center center;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url({{ url_for('static', filename='controls.png')}})
+        no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose.hover{background-position:-25px -25px;}
+
+    </style>
 </head>
+
 <body>
 <div id="container">
     <div id="header">
         <div class="title">
             <p class="title_1">
                 <span class="s">-</span>
-                <span class="s1">Product Service</span><br>
-                <span class="s2">tailor the most suitable product for you</span>
+                <span class="s1">{{ producttitle.title_in_english }}</span><br>
+                <span class="s2">{{ producttitle.subtitle_in_english }}</span>
             </p>
 
             <p class="title_2">
                 <span class="s">-</span>
-                <span class="s3">产品服务</span><br>
-                <span class="s4">为您量身打造最适合您的产品</span></p>
+                <span class="s3">{{ producttitle.title }}</span><br>
+                <span class="s4">{{ producttitle.subtitle }}</span></p>
         </div>
     </div>
     <div class="clear"></div>
     <div id="body">
         <div class="cen">
             <div class="cleft">
-                <div class="over ctgl">
-                    <a href="#">
+                <div class="imglist" id="iscroll0">
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox1
+                       target=_blank>
                         <img src="{{ url_for('static', filename='ctgl.png') }}">
                     </a>
+                    {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox1 target=_blank></A>
+                    {% endfor %}
                 </div>
-                <div class=" over zydsf">
-                    <a href="#">
+                <div class="imglist1" id="iscroll1">
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox2
+                       target=_blank>
                         <img src="{{ url_for('static', filename='zydsf.png') }}">
                     </a>
+                    {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox2 target=_blank></A>
+                    {% endfor %}
                 </div>
                 <div class="over wycx">
-                    <a href="#">
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox3
+                       target=_blank>
                         <img src="{{ url_for('static', filename='wycx.png') }}">
                     </a>
+                    {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox3 target=_blank></A>
+                    {% endfor %}
                 </div>
             </div>
             <div class="cmain">
                 <div class="over scdy">
-                    <a href="#">
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox4
+                       target=_blank>
                         <img src="{{ url_for('static', filename='scdy.png') }}">
                     </a>
-
+                    {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox4 target=_blank></A>
+                    {% endfor %}
                 </div>
                 <div class="cmd">
                     <div class="over yxzx">
-                        <a href="#">
+                        <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox5
+                           target=_blank>
                             <img src="{{ url_for('static', filename='yxzx.png') }}">
                         </a>
+                        {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                        <A href="{{ url_for('static', filename=img) }}" rel=colorbox5 target=_blank></A>
+                        {% endfor %}
                     </div>
                     <div class="over wadl">
-                        <a href="#">
+                        <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox6
+                           target=_blank>
                             <img src="{{ url_for('static', filename='wadl.png') }}">
                         </a>
+                        {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                        <A href="{{ url_for('static', filename=img) }}" rel=colorbox6 target=_blank></A>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="cright">
                 <div class="over mhkf">
-                    <a href="#">
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox7
+                       target=_blank>
                         <img src="{{ url_for('static', filename='mhkf.png') }}">
                     </a>
+                    {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox7 target=_blank></A>
+                    {% endfor %}
                 </div>
                 <div class="over yqfw">
-                    <a href="#"><img src="{{ url_for('static', filename='yqfw.png') }}"></a></div>
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox8
+                       target=_blank>
+                        <img src="{{ url_for('static', filename='yqfw.png') }}">
+                    </a>
+                    {% for img in productname[0].productdetails if img != productname[0].productdetails[0] %}
+                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox8 target=_blank></A>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
     <div id="footer"></div>
 </div>
-<script type="text/javascript" rel="script">
-    $(".over").hover(function(){
-        var width=$(this).width();
-        var height=$(this).height();
-        $(this).width(width+3);
-        $(this).height(height+3);
-    },function(){
-        var width=$(this).width();
-        var height=$(this).height();
-        $(this).width(width-3);
-        $(this).height(height-3);
-    });
-//    $(".over").hover(function(){
-//        $(this).css({'border-width':'2px','border-style':'solid','border-color':'red'});
-//    },function(){
-//        $(this).css({'border-width':'0','border-style':'none'});
-//    });
-</script>
+<SCRIPT type=text/javascript>/*<![CDATA[*/
+    if(!isMobile()){$(document).ready(function(){$("a[rel^='colorbox']").colorbox({title:" ",slideshow:true,slideshowAuto:false,previous:"上一张",next:"下一张",close:"关闭",slideshowStart:"播放",slideshowStop:"暂停",current:"第 {current} 张 (共{total}张)"});});}/*]]>*/
+
+</SCRIPT>
 </body>
 </html>
