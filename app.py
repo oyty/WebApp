@@ -563,8 +563,9 @@ def agency():
 
 @app.route('/contact')
 def contact():
+    title = ContactTitle.query.all()[0]
     c = Contact.query.filter_by(id='1').first()
-    return render_template('contact.html', contact=c)
+    return render_template('contact.html', contacttitle=title, contact=c)
 
 
 admin = Admin(app,

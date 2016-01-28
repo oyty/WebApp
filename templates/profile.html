@@ -7,28 +7,31 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
 </head>
 <body>
-<div id="container">
-    <div class="main">
-        <div class="left">
-            <div class="title">
-                <p class="title_1">
-                    <span class="s">-</span>
-                    <span class="s1">ComPany Profile</span><br>
-                    <span class="s2">tailor the most suitable product for you</span>
-                </p>
+<div id="containerbody">
+    <div id="header">
+        <div class="title">
+            <p class="title_1">
+                <span class="s">-</span>
+                <span class="s1">ComPany Profile</span><br>
+                <span class="s2">tailor the most suitable product for you</span>
+            </p>
 
-                <p class="title_2">
-                    <span class="s">-</span>
-                    <span class="s3">公司简介</span><br>
-                    <span class="s4">为您量身打造最适合您的产品</span></p>
-            </div>
+            <p class="title_2">
+                <span class="s">-</span>
+                <span class="s3">公司简介</span><br>
+                <span class="s4">为您量身打造最适合您的产品</span></p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="main">
+        <div class="cen">
             <div class="circle_block">
-                <div class="circle"><span>成立<br>时间</span></div>
-                <div class="circle"><span>注册<br>资金</span></div>
-                <div class="circle"><span>运作<br>机构</span></div>
-                <div class="circle"><span>人才<br>团队</span></div>
-                <div class="circle"><span>服务<br>范畴</span></div>
-                <div class="circle"><span>工作<br>目标</span></div>
+                <div class="circle"><span class="vc-inner">成立<br>时间</span></div>
+                <div class="circle"><span class="vc-inner">注册<br>资金</span></div>
+                <div class="circle"><span class="vc-inner">运作<br>机构</span></div>
+                <div class="circle"><span class="vc-inner">人才<br>团队</span></div>
+                <div class="circle"><span class="vc-inner">服务<br>范畴</span></div>
+                <div class="circle"><span class="vc-inner">工作<br>目标</span></div>
             </div>
             <div class="content">
                 <div class="content_text">
@@ -38,40 +41,42 @@
                     <p>公司竭诚为顾客提供市场信息采集咨询服务、舆情分析监控服务、专业第三方服务、创业培训与天使投资咨询管理服务、营销推广咨询服务、门户平台开发设计服务等专业服务。</p>
                 </div>
             </div>
-
         </div>
-        <div class="right">
-            <div class="right_circle">
-                <div class="r_circle"></div>
-                <div class="right_content">
-                    <p class="p1">HELLO</p>
 
-                    <p class="p2">I'm Anhui Public</p>
+    </div>
+    <div class="right">
+        <div class="right_circle">
+            <div class="r_circle"></div>
+            <div class="right_content">
+                <p class="p1">HELLO</p>
 
-                    <p class="p2">Media Data</p>
+                <p class="p2">I'm Anhui Public</p>
 
-                    <p class="p2">Technology Co.Ltd.</p>
-                </div>
+                <p class="p2">Media Data</p>
+
+                <p class="p2">Technology Co.Ltd.</p>
             </div>
         </div>
     </div>
-    <div class="clear"></div>
-    <div class="foot_guide">
-        <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
-        <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
-        <div class="foot_img02">
-            <img src="{{ url_for('static', filename='foot_profile.png') }}">
-            <div class="txt">
-                <span><a href="">公司简介</a></span>
-                <span class="t"><a href="{{ url_for('product') }}">产品服务</a></span>
-                <span class="t"><a href="{{ url_for('talent') }}">人才团队</a></span>
-                <span class="t"><a href="{{ url_for('projects') }}">项目案例</a></span>
-                <span class="t"><a href="{{ url_for('agency') }}">合作机构</a></span>
-                <span class="t"><a href="{{ url_for('contact') }}">联系我们</a></span>
-            </div>
+</div>
+<div class="clear"></div>
+<div class="foot_guide">
+    <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
+    <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
+    <div class="foot_img02">
+        <img src="{{ url_for('static', filename='foot_profile.png') }}">
+
+        <div class="txt">
+            <span><a href="" style="color: transparent">公司简介</a></span>
+            <span class="t"><a href="{{ url_for('product') }}" style="color: transparent">产品服务</a></span>
+            <span class="t"><a href="{{ url_for('talent') }}" style="color: transparent">人才团队</a></span>
+            <span class="t"><a href="{{ url_for('projects') }}" style="color: transparent">项目案例</a></span>
+            <span class="t"><a href="{{ url_for('agency') }}" style="color: transparent">合作机构</a></span>
+            <span class="t"><a href="{{ url_for('contact') }}" style="color: transparent">联系我们</a></span>
         </div>
     </div>
-    <div class="clear"></div>
+</div>
+<div class="clear"></div>
 </div>
 </body>
 </html>

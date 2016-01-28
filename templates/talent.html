@@ -3,29 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>安徽众媒数据科技有限公司</title>
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='talent.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link type="text/css" rel="stylesheet" href="../static/talent.css">
+    <link type="text/css" rel="stylesheet" href="../static/common.css">
+    <link rel="stylesheet" type="text/css" href="../static/normalize.css"/>
+    <link rel="stylesheet" href="../static/mk-3Dcarousel.css">
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
 
 </head>
 <body>
-<div id="container">
+<div id="containerbody">
     <div id="header">
         <div class="title">
             <p class="title_1">
                 <span class="s">-</span>
-                <span class="s1">Talent Team</span><br>
+                <span class="s1">ComPany Profile</span><br>
                 <span class="s2">tailor the most suitable product for you</span>
             </p>
 
             <p class="title_2">
                 <span class="s">-</span>
-                <span class="s3">人才团队</span><br>
+                <span class="s3">公司简介</span><br>
                 <span class="s4">为您量身打造最适合您的产品</span></p>
         </div>
     </div>
     <div class="clear"></div>
-    <div id="body"></div>
+
+    <div class="container">
+        <div class="mk-carousel" id="mkCarousel">
+            <img src="../static/001.jpg" alt="">
+            <img class="active" src="../static/002.jpg" alt="">
+            <img src="../static/003.jpg" alt="">
+            <img src="../static/004.jpg" alt="">
+            <img src="../static/005.jpg" alt="">
+            <img src="../static/006.jpg" alt="">
+            <img src="../static/007.jpg" alt="">
+            <img src="../static/008.jpg" alt="">
+        </div>
+        <div style="text-align: center; color: black">阿萨德就卡卡将阿斯顿</div>
+        <div style="text-align: center; color: black">阿萨德就卡卡将阿斯顿</div>
+
+    </div>
     <div id="footer"></div>
+    <div class="clear"></div>
+    <div class="foot_guide">
+        <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
+        <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
+        <div class="foot_img02">
+            <img src="{{ url_for('static', filename='foot_talent.png') }}">
+
+            <div class="txt">
+                <span><a href="{{ url_for('profile') }}" style="color: transparent;">公司简介</a></span>
+                <span class="t"><a href="{{ url_for('product') }}" style="color: transparent;">产品服务</a></span>
+                <span class="t"><a href="" style="color: transparent;">人才团队</a></span>
+                <span class="t"><a href="{{ url_for('projects') }}" style="color: transparent;">项目案例</a></span>
+                <span class="t"><a href="{{ url_for('agency') }}" style="color: transparent;">合作机构</a></span>
+                <span class="t"><a href="{{ url_for('contact') }}" style="color: transparent;">联系我们</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
 </div>
+<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="../static/jquery-2.1.1.min.js"><\/script>')</script>
+<script src="../static/mk-3Dcarousel.js"></script>
+<script src="../static/custom.js"></script>
 </body>
 </html>

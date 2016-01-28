@@ -1,13 +1,4 @@
-#header {
-    color: #4D5E6E;
-}
-
-#body{
-    float: left;
+#body {
     width: 1096px;
-    height: 400px;
-    margin: auto;
-    background-image: url("../img/agency_bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 450px;
 }

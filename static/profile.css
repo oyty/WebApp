@@ -7,34 +7,50 @@
     text-indent: 30px;
     font-size: 14px;
     font-weight: bold;
-    font-family: "KaiTi";
-}
-
-.circle_block {
-    margin-top: 70px;
-    height: 100px;
-    width: 800px;
+    margin-top: 30px;
 }
 
 .circle {
+    width:80px;height:80px;text-align:center;
+    display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;
+    display:-moz-box;-moz-box-align:center;-moz-box-pack:center;
+    display:-o-box;-o-box-align:center;-o-box-pack:center;
+    display:-ms-box;-ms-box-align:center;-ms-box-pack:center;
+    display:box;box-align:center;box-pack:center;
     float: left;
     margin-left: 20px;
-    width: 80px;
-    height: 80px;
     background: #4D5E6E;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
 }
 
-.circle_block span {
-    display: block;
+
+/*换行文字垂直居中*/
+.circle_block{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width:800px;
+    height:100px;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    }
+
+
+.circle_block .vc-inner{
+    *position:relative;
+    *top:-50%;
+    *left:-50%;
     font-size: larger;
     font-weight: bolder;
     color: white;
-    margin-top: 20px;
-    margin-left: 20px;
+    word-break:break-all;
 }
+
+
+
+
 
 /*---左圆----*/
 .right {
@@ -42,7 +58,7 @@
 }
 
 .right_circle {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .r_circle {
@@ -68,5 +84,13 @@
 
 .right_content .p2 {
     font-size: 25px;
+}
+
+.cen {
+float: left;
+    margin: auto;
+    margin-top: 30px;
+    width: 700px;
+    height: 450px;
 }
 

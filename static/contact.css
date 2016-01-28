@@ -13,54 +13,59 @@
 }
 
 .cinfo {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bolder;
     font-family: "Adobe Heiti Std";
     display: block;
-    width: 200px;
+    width: 230px;
     color: rgb(77, 94, 110);
     text-align: center;
 }
 
 .sjh {
     position: relative;
-    top: 70px;
-    left: -20px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    top: 55px;
+    left: -50px;
+    -ms-transform:rotate(-45deg); /* IE 9 */
+    -moz-transform:rotate(-45deg); /* Firefox */
+    -webkit-transform:rotate(-45deg); /* Safari and Chrome */
+    -o-transform:rotate(-45deg); /* Opera */
+    transform:rotate(-45deg);
+
 }
 
 .yx {
     position: relative;
-    top: 240px;
-    left: -20px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    top: 235px;
+    left: -45px;
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -moz-transform:rotate(45deg); /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari and Chrome */
+    -o-transform:rotate(45deg); /* Opera */
+    transform:rotate(45deg);
 }
 
 .qq {
     float: right;
     position: relative;
-    top: 30px;
-    right: 33px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    top: 0px;
+    right: 0px;
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -moz-transform:rotate(45deg); /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari and Chrome */
+    -o-transform:rotate(45deg); /* Opera */
+    transform:rotate(45deg);
 }
 
 .dz {
     float: right;
     position: relative;
-    top: 210px;
-    right: -180px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(45deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    top: 200px;
+    right: -230px;
+    -ms-transform:rotate(-45deg); /* IE 9 */
+    -moz-transform:rotate(-45deg); /* Firefox */
+    -webkit-transform:rotate(-45deg); /* Safari and Chrome */
+    -o-transform:rotate(-45deg); /* Opera */
+    transform:rotate(-45deg);
 }
 

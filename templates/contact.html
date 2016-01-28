@@ -7,19 +7,19 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
 </head>
 <body>
-<div id="container">
+<div id="containerbody">
     <div id="header">
         <div class="title">
             <p class="title_1">
                 <span class="s">-</span>
-                <span class="s1">{{ title.title_in_english }}</span><br>
-                <span class="s2">{{ title.subtitle_in_english }}</span>
+                <span class="s1">{{ contacttitle.title_in_english }}</span><br>
+                <span class="s2">{{ contacttitle.subtitle_in_english }}</span>
             </p>
 
             <p class="title_2">
                 <span class="s">-</span>
-                <span class="s3">{{ title.title }}</span><br>
-                <span class="s4">{{ title.subtitle }}</span></p>
+                <span class="s3">{{ contacttitle.title }}</span><br>
+                <span class="s4">{{ contacttitle.subtitle }}</span></p>
         </div>
     </div>
     <div class="clear"></div>
@@ -30,22 +30,24 @@
         <span class="cinfo qq">QQ：{{ contact.qq }}</span>
         <span class="cinfo dz">地址：{{ contact.address }}</span>
     </div>
+    <div class="clear"></div>
     <div class="foot_guide">
         <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
         <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
         <div class="foot_img02">
             <img src="{{ url_for('static', filename='foot_contact.png') }}">
             <div class="txt">
-                <span><a href="{{ url_for('profile') }}">公司简介</a></span>
-                <span class="t"><a href="{{ url_for('product') }}">产品服务</a></span>
-                <span class="t"><a href="{{ url_for('talent') }}">人才团队</a></span>
-                <span class="t"><a href="{{ url_for('projects') }}">项目案例</a></span>
-                <span class="t"><a href="{{ url_for('agency') }}">合作机构</a></span>
-                <span class="t"><a href="">联系我们</a></span>
+                <span><a href="{{ url_for('profile') }}" style="color: transparent;">公司简介</a></span>
+                <span class="t"><a href="{{ url_for('product') }}" style="color: transparent;">产品服务</a></span>
+                <span class="t"><a href="{{ url_for('talent') }}" style="color: transparent;">人才团队</a></span>
+                <span class="t"><a href="{{ url_for('projects') }}" style="color: transparent;">项目案例</a></span>
+                <span class="t"><a href="{{ url_for('agency') }}" style="color: transparent;" >合作机构</a></span>
+                <span class="t"><a href="" style="color: transparent;">联系我们</a></span>
             </div>
         </div>
     </div>
     <div id="footer"></div>
+    <div class="clear"></div>
 </div>
 </body>
 </html>

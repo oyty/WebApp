@@ -5,7 +5,7 @@
     <title>安徽众媒数据科技有限公司</title>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='projects.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
-    <script type="text/javascript" src="{{ url_for('static', filename='jquery.css') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='frame.css') }}">
     <script type="text/javascript" rel="script" src="{{ url_for('static', filename='jquery-1.11.3.js') }}"></script>
     <SCRIPT type=text/javascript src="{{ url_for('static', filename='jquery.min.js') }}"></SCRIPT>
@@ -60,20 +60,22 @@
             //Set a background image(thumbOver) on the &lt;a&gt; tag
             $(this).find("a.thumb").css({'background' : 'url(' + thumbOver + ') no-repeat center bottom'});
             //Fade the image to 0
-            $(this).find("span").stop().fadeTo('normal', 0 , function() {
+            $(this).find("img").stop().fadeTo('normal', 0 , function() {
                 $(this).hide() //Hide the image after fade
             });
         } , function() { //on hover out...
             //Fade the image to 1
-            $(this).find("span").stop().fadeTo('normal', 1).show();
+            $(this).find("img").stop().fadeTo('normal', 1).show();
         });
 
     });
 
+
+
     </script>
 </head>
 <body>
-<div id="container">
+<div id="containerbody">
     <div id="header">
         <div class="title">
             <p class="title_1">
@@ -88,46 +90,52 @@
                 <span class="s4">{{ projecttitle.subtitle }}</span></p>
         </div>
     </div>
-    <div id="body">
+    <div class="clear"></div>
+    <div id="main">
         <ul class="gallery">
             {% for project in projects %}
             <li>
-                <!--<img src="images/bottom.png" alt="" style="width: 212px;" />-->
                 <div class="imglist" id="iscroll0">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=project.projectdetails[0]) }}" rel=colorbox1
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=project.projectdetails[0]) }}"
+                       rel={{"colorbox" ~ project.id }}
                        target=_blank class="thumb"><span>
                         <img src="{{ url_for('static', filename=project.photo) }}"></span>
                     </a>
-                    <h2><a href="{{ url_for('static', filename=project.projectdetails[0]) }}">{{ project.name }}</a></h2>
-                    {% for img in project.projectdetails if img != project.projectdetails[0] %}
-                    <A href="{{ url_for('static', filename=img) }}" rel=colorbox1 target=_blank></A>
+
+                    <h2><a href="">{{ project.name }}</a></h2>
+                    {% for img in project.projectdetails if img != project.projectdetails[0] and img %}
+                    <A href="{{ url_for('static', filename=img) }}" rel={{"colorbox" ~ project.id }} target=_blank></A>
                     {% endfor %}
                 </div>
             </li>
             {% endfor %}
+
         </ul>
 
     </div>
+    <div class="clear"></div>
     <div class="foot_guide">
-        <div class="foot_img01"><img src="../static/foot_title.png"></div>
+        <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
         <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
         <div class="foot_img02">
-            <img src="../static/foot_products.png">
+            <img src="{{ url_for('static', filename='foot_project.png') }}">
 
-            <div class="txt">
-                <span><a href="{{ url_for('profile') }}">公司简介</a></span>
-                <span class="t"><a href="">产品服务</a></span>
-                <span class="t"><a href="{{ url_for('talent') }}">人才团队</a></span>
-                <span class="t"><a href="{{ url_for('projects') }}">项目案例</a></span>
-                <span class="t"><a href="{{ url_for('agency') }}">合作机构</a></span>
-                <span class="t"><a href="{{ url_for('contact') }}">联系我们</a></span>
+            <div class="txt" >
+                <span><a href="{{ url_for('profile') }}" style="color: transparent;">公司简介</a></span>
+                <span class="t"><a href="{{ url_for('product') }}" style="color: transparent;">产品服务</a></span>
+                <span class="t"><a href="{{ url_for('talent') }}" style="color: transparent;">人才团队</a></span>
+                <span class="t"><a href="" style="color: transparent;">项目案例</a></span>
+                <span class="t"><a href="{{ url_for('agency') }}" style="color: transparent;">合作机构</a></span>
+                <span class="t"><a href="{{ url_for('contact') }}" style="color: transparent;">联系我们</a></span>
             </div>
         </div>
     </div>
-    <div id="footer"></div>
+    <div class="clear"></div>
 </div>
 <SCRIPT type=text/javascript>/*<![CDATA[*/
     if(!isMobile()){$(document).ready(function(){$("a[rel^='colorbox']").colorbox({title:" ",slideshow:true,slideshowAuto:false,previous:"上一张",next:"下一张",close:"关闭",slideshowStart:"播放",slideshowStop:"暂停",current:"第 {current} 张 (共{total}张)"});});}/*]]>*/
+
+
 
 </SCRIPT>
 </body>

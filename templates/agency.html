@@ -3,11 +3,359 @@
 <head>
     <meta charset="UTF-8">
     <title>安徽众媒数据科技有限公司</title>
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='agency.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link type="text/css" rel="stylesheet" href="../static/agency.css">
+    <link type="text/css" rel="stylesheet" href="../static/common.css">
+    <style type="text/css">
+
+        /* screen */
+        #screen {
+        position: absolute;
+        width: 1000px;
+        height: 450px;
+        margin-left: 50px;
+        background: #868788;
+        overflow: hidden;
+        }
+
+        #screen img, canvas {
+        position: absolute;
+        left: -9999px;
+        cursor: pointer;
+        image-rendering: optimizeSpeed;
+        }
+
+        #screen .href {
+        border: #FFF dotted 1px;
+        }
+
+        #screen .fog {
+        position: absolute;
+        background: #EEE;
+        opacity: 0.1;
+        filter: alpha(opacity=10);
+        }
+
+        #command {
+        position: absolute;
+        left: 1em;
+        top: 1em;
+        width: 120px;
+        z-index: 30000;
+        background: #DADEE1;
+        border: #929394 solid 1em;
+        }
+
+        #bar {
+        position: relative;
+        left: 1em;
+        top: 1em;
+        height: 160px;
+        }
+
+        #bar .button {
+        position: absolute;
+        background: #222;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        }
+
+        #bar .loaded {
+        background: #FFF;
+        }
+
+        #bar .viewed {
+        background: #fff;
+        }
+
+        #bar .selected {
+        background: #88898A;
+        }
+
+        #urlInfo {
+        position: absolute;
+        background: url(images/r.gif) no-repeat 0 4px;
+        visibility: hidden;
+        z-index: 30000;
+        padding-left: 12px;
+        cursor: pointer;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // =============================================================
+        //           ===== 3D gallery experiment =====
+        // script written by Gerard Ferrandez - April 5, 2010
+        // http://www.dhteumeuleu.com
+        // use under a CC-BY-NC license
+        // -------------------------------------------------------------
+        // update: April 17 : added hyperlinks, tweaked z-index
+        // =============================================================
+
+        var m3D = function () {
+            /* ---- private vars ---- */
+            var diapo = [],
+                    imb,
+                    scr,
+                    bar,
+                    selected,
+                    urlInfo,
+                    imagesPath = "../static/",
+                    camera = {x: 0, y: 0, z: -650, s: 0, fov: 500},
+                    nw = 0,
+                    nh = 0;
+            /* ==== camera tween methods ==== */
+            camera.setTarget = function (c0, t1, p) {
+                if (Math.abs(t1 - c0) > .1) {
+                    camera.s = 1;
+                    camera.p = 0;
+                    camera.d = t1 - c0;
+                    if (p) {
+                        camera.d *= 2;
+                        camera.p = 9;
+                    }
+                }
+            }
+            camera.tween = function (v) {
+                if (camera.s != 0) {
+                    camera.p += camera.s;
+                    camera[v] += camera.d * camera.p * .01;
+                    if (camera.p == 10) camera.s = -1;
+                    else if (camera.p == 0) camera.s = 0;
+                }
+                return camera.s;
+            }
+            /* ==== diapo constructor ==== */
+            var Diapo = function (n, img, x, y, z) {
+                if (img) {
+                    this.url = img.url;
+                    this.title = img.title;
+                    this.color = img.color;
+                    this.isLoaded = false;
+                    if (document.createElement("canvas").getContext) {
+                        /* ---- using canvas in place of images (performance trick) ---- */
+                        this.srcImg = new Image();
+                        this.srcImg.src = imagesPath + img.src;
+                        this.img = document.createElement("canvas");
+                        this.canvas = true;
+                        scr.appendChild(this.img);
+                    } else {
+                        /* ---- normal image ---- */
+                        this.img = document.createElement('img');
+                        this.img.src = imagesPath + img.src;
+                        scr.appendChild(this.img);
+                    }
+                    /* ---- on click event ---- */
+                    this.img.onclick = function () {
+                        if (camera.s) return;
+                        if (this.diapo.isLoaded) {
+                            if (this.diapo.urlActive) {
+                                /* ---- jump hyperlink ---- */
+                                top.location.href = this.diapo.url;
+                            } else {
+                                /* ---- target positions ---- */
+                                camera.tz = this.diapo.z - camera.fov;
+                                camera.tx = this.diapo.x;
+                                camera.ty = this.diapo.y;
+                                /* ---- disable previously selected img ---- */
+                                if (selected) {
+                                    selected.but.className = "button viewed";
+                                    selected.img.className = "";
+                                    selected.img.style.cursor = "pointer";
+                                    selected.urlActive = false;
+                                    urlInfo.style.visibility = "hidden";
+                                }
+                                /* ---- select current img ---- */
+                                this.diapo.but.className = "button selected";
+                                interpolation(false);
+                                selected = this.diapo;
+                            }
+                        }
+                    }
+                    /* ---- command bar buttons ---- */
+                    this.but = document.createElement('div');
+                    this.but.className = "button";
+                    bar.appendChild(this.but);
+                    this.but.diapo = this;
+                    this.but.style.left = Math.round((this.but.offsetWidth * 1.2) * (n % 4)) + 'px';
+                    this.but.style.top = Math.round((this.but.offsetHeight * 1.2) * Math.floor(n / 4)) + 'px';
+                    this.but.onclick = this.img.onclick;
+                    imb = this.img;
+                    this.img.diapo = this;
+                    this.zi = 25000;
+                } else {
+                    /* ---- transparent div ---- */
+                    this.img = document.createElement('div');
+                    this.isLoaded = true;
+                    this.img.className = "fog";
+                    scr.appendChild(this.img);
+                    this.w = 300;
+                    this.h = 300;
+                    this.zi = 15000;
+                }
+                /* ---- object variables ---- */
+                this.x = x;
+                this.y = y;
+                this.z = z;
+                this.css = this.img.style;
+            }
+            /* ==== main 3D animation ==== */
+            Diapo.prototype.anim = function () {
+                if (this.isLoaded) {
+                    /* ---- 3D to 2D projection ---- */
+                    var x = this.x - camera.x;
+                    var y = this.y - camera.y;
+                    var z = this.z - camera.z;
+                    if (z < 20) z += 5000;
+                    var p = camera.fov / z;
+                    var w = this.w * p;
+                    var h = this.h * p;
+                    /* ---- HTML rendering ---- */
+                    this.css.left = Math.round(nw + x * p - w * .5) + 'px';
+                    this.css.top = Math.round(nh + y * p - h * .5) + 'px';
+                    this.css.width = Math.round(w) + 'px';
+                    this.css.height = Math.round(h) + 'px';
+                    this.css.zIndex = this.zi - Math.round(z);
+                } else {
+                    /* ---- image is loaded? ---- */
+                    this.isLoaded = this.loading();
+                }
+            }
+            /* ==== onload initialization ==== */
+            Diapo.prototype.loading = function () {
+                if ((this.canvas && this.srcImg.complete) || this.img.complete) {
+                    if (this.canvas) {
+                        /* ---- canvas version ---- */
+                        this.w = this.srcImg.width;
+                        this.h = this.srcImg.height;
+                        this.img.width = this.w;
+                        this.img.height = this.h;
+                        var context = this.img.getContext("2d");
+                        context.drawImage(this.srcImg, 0, 0, this.w, this.h);
+                    } else {
+                        /* ---- plain image version ---- */
+                        this.w = this.img.width;
+                        this.h = this.img.height;
+                    }
+                    /* ---- button loaded ---- */
+                    this.but.className += " loaded";
+                    return true;
+                }
+                return false;
+            }
+            ////////////////////////////////////////////////////////////////////////////
+            /* ==== screen dimensions ==== */
+            var resize = function () {
+                nw = scr.offsetWidth * .5;
+                nh = scr.offsetHeight * .5;
+            }
+            /* ==== disable interpolation during animation ==== */
+            var interpolation = function (bicubic) {
+                var i = 0, o;
+                while (o = diapo[i++]) {
+                    if (o.but) {
+                        o.css.msInterpolationMode = bicubic ? 'bicubic' : 'nearest-neighbor'; // makes IE8 happy
+                        o.css.imageRendering = bicubic ? 'optimizeQuality' : 'optimizeSpeed'; // does not really work...
+                    }
+                }
+            }
+            /* ==== init script ==== */
+            var init = function (data) {
+                /* ---- containers ---- */
+                scr = document.getElementById("screen");
+                bar = document.getElementById("bar");
+                urlInfo = document.getElementById("urlInfo");
+                resize();
+                /* ---- loading images ---- */
+                var i = 0,
+                        o,
+                        n = data.length;
+                while (o = data[i++]) {
+                    /* ---- images ---- */
+                    var x = 1000 * ((i % 4) - 1.5);
+                    var y = Math.round(Math.random() * 4000) - 2000;
+                    var z = i * (5000 / n);
+                    diapo.push(new Diapo(i - 1, o, x, y, z));
+                    /* ---- transparent frames ---- */
+                    var k = diapo.length - 1;
+                    for (var j = 0; j < 3; j++) {
+                        var x = Math.round(Math.random() * 4000) - 2000;
+                        var y = Math.round(Math.random() * 4000) - 2000;
+                        diapo.push(new Diapo(k, null, x, y, z + 100));
+                    }
+                }
+                /* ---- start engine ---- */
+                run();
+            }
+            ////////////////////////////////////////////////////////////////////////////
+            /* ==== main loop ==== */
+            var run = function () {
+                /* ---- x axis move ---- */
+                if (camera.tx) {
+
+                    if (!camera.s) camera.setTarget(camera.x, camera.tx);
+                    var m = camera.tween('x');
+                    if (!m) camera.tx = 0;
+                    /* ---- y axis move ---- */
+                } else if (camera.ty) {
+                    if (!camera.s) camera.setTarget(camera.y, camera.ty);
+                    var m = camera.tween('y');
+                    if (!m) camera.ty = 0;
+                    /* ---- z axis move ---- */
+                } else if (camera.tz) {
+                    if (!camera.s) camera.setTarget(camera.z, camera.tz);
+                    var m = camera.tween('z');
+                    if (!m) {
+                        /* ---- animation end ---- */
+                        camera.tz = 0;
+                        interpolation(true);
+                        /* ---- activate hyperlink ---- */
+                        if (selected.url) {
+                            selected.img.style.cursor = "pointer";
+                            selected.urlActive = true;
+                            selected.img.className = "href";
+                            urlInfo.diapo = selected;
+                            urlInfo.onclick = selected.img.onclick;
+                            urlInfo.innerHTML = selected.title || selected.url;
+                            urlInfo.style.visibility = "visible";
+                            urlInfo.style.color = selected.color || "#fff";
+                            urlInfo.style.top = Math.round(selected.img.offsetTop + selected.img.offsetHeight - urlInfo.offsetHeight - 5) + "px";
+                            urlInfo.style.left = Math.round(selected.img.offsetLeft + selected.img.offsetWidth - urlInfo.offsetWidth - 5) + "px";
+                        } else {
+                            selected.img.style.cursor = "default";
+                        }
+                    }
+                }
+                /* ---- anim images ---- */
+                var i = 0, o;
+                while (o = diapo[i++]) o.anim();
+                /* ---- loop ---- */
+                setTimeout(run, 32);
+            }
+            return {
+                ////////////////////////////////////////////////////////////////////////////
+                /* ==== initialize script ==== */
+                init: init
+            }
+        }();
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 </head>
+
 <body>
-<div id="container">
+<div id="containerbody">
     <div id="header">
         <div class="title">
             <p class="title_1">
@@ -22,26 +370,68 @@
                 <span class="s4">为您量身打造最适合您的产品</span></p>
         </div>
     </div>
+    <div class="clear"></div>
     <div id="body">
+        <div id="screen">
+            <div id="command">
+                <div id="bar"></div>
+            </div>
+            <div id="urlInfo"></div>
+        </div>
+        <script type="text/javascript">
+    /* ==== start script ==== */
+    setTimeout(function () {
+        m3D.init(
+                [
+                    {src: '46eae50db6.jpg', url: 'http://www.ectopc.com', title: '页面跳转', color: '#fff'},
+                    {src: '1ef7ea6559.jpg'},
+                    {src: '8fe86226ff.jpg'},
+                    {src: '69833ed09a.jpg'},
+                    {src: 'fe00425d0a.jpg'},
+                    {src: 'b05b0c6962.jpg'},
+                    {src: '6a884d6ef2.jpg'},
+                    {src: 'ed57bce8c4.jpg'},
+                    {src: '94da4fb185.jpg'},
+                    {src: 'd04505fe96.jpg'},
+                    {src: '46eae50db6.jpg', url: 'http://www.ectopc.com', title: '页面跳转', color: '#fff'},
+                    {src: '1ef7ea6559.jpg'},
+                    {src: '8fe86226ff.jpg'},
+                    {src: '69833ed09a.jpg'},
+                    {src: 'fe00425d0a.jpg'},
+                    {src: 'b05b0c6962.jpg'},
+                    {src: '6a884d6ef2.jpg'},
+                    {src: 'ed57bce8c4.jpg'},
+                    {src: '94da4fb185.jpg'},
+                    {src: 'd04505fe96.jpg'},
+                    {src: '46eae50db6.jpg', url: 'http://www.ectopc.com', title: '页面跳转', color: '#fff'},
+                    {src: '1ef7ea6559.jpg'},
+                    {src: '8fe86226ff.jpg'},
+                    {src: '69833ed09a.jpg'},
+                ]
+        );
+    }, 500);
+        </script>
 
     </div>
+    <div class="clear"></div>
     <div class="foot_guide">
-        <div class="foot_img01"><img src="{{ url_for('static', filename='foot_title.png') }}"></div>
+        <div class="foot_img01"><img src="../static/foot_title.png"></div>
         <div class="foot_content">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</div>
         <div class="foot_img02">
-            <img src="{{ url_for('static', filename='foot_agency.png') }}">
+            <img src="../static/foot_agency.png">
 
             <div class="txt">
-                <span><a href="{{ url_for('profile') }}">公司简介</a></span>
-                <span class="t"><a href="{{ url_for('product') }}">产品服务</a></span>
-                <span class="t"><a href="{{ url_for('talent') }}">人才团队</a></span>
-                <span class="t"><a href="{{ url_for('projects') }}">项目案例</a></span>
-                <span class="t"><a href="#">合作机构</a></span>
-                <span class="t"><a href="{{ url_for('contact') }}">联系我们</a></span>
+                <span><a href="{{ url_for('profile') }}" style="color: transparent;">公司简介</a></span>
+                <span class="t"><a href="{{ url_for('product') }}" style="color: transparent;">产品服务</a></span>
+                <span class="t"><a href="{{ url_for('talent') }}" style="color: transparent;">人才团队</a></span>
+                <span class="t"><a href="{{ url_for('projects') }}" style="color: transparent;">项目案例</a></span>
+                <span class="t"><a href="#" style="color: transparent;">合作机构</a></span>
+                <span class="t"><a href="{{ url_for('contact') }}" style="color: transparent;">联系我们</a></span>
             </div>
         </div>
     </div>
     <div id="footer"></div>
+    <div class="clear"></div>
 </div>
 </body>
 </html>

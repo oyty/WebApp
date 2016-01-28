@@ -52,7 +52,7 @@
 </head>
 
 <body>
-<div id="container">
+<div id="containerbody">
     <div id="header">
         <div class="title">
             <p class="title_1">
@@ -68,11 +68,12 @@
         </div>
     </div>
     <div class="clear"></div>
-    <div id="body">
+    <div id="main">
         <div class="cen">
             <div class="cleft">
                 <div class="imglist" id="iscroll0">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox1
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                       rel=colorbox1
                        target=_blank>
                         <img src="{{ url_for('static', filename='ctgl.png') }}">
                     </a>
@@ -81,7 +82,8 @@
                     {% endfor %}
                 </div>
                 <div class="imglist1" id="iscroll1">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox2
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                       rel=colorbox2
                        target=_blank>
                         <img src="{{ url_for('static', filename='zydsf.png') }}">
                     </a>
@@ -90,7 +92,8 @@
                     {% endfor %}
                 </div>
                 <div class="over wycx">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox3
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                       rel=colorbox3
                        target=_blank>
                         <img src="{{ url_for('static', filename='wycx.png') }}">
                     </a>
@@ -101,7 +104,8 @@
             </div>
             <div class="cmain">
                 <div class="over scdy">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox4
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                       rel=colorbox4
                        target=_blank>
                         <img src="{{ url_for('static', filename='scdy.png') }}">
                     </a>
@@ -111,7 +115,8 @@
                 </div>
                 <div class="cmd">
                     <div class="over yxzx">
-                        <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox5
+                        <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                           rel=colorbox5
                            target=_blank>
                             <img src="{{ url_for('static', filename='yxzx.png') }}">
                         </a>
@@ -120,7 +125,8 @@
                         {% endfor %}
                     </div>
                     <div class="over wadl">
-                        <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox6
+                        <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                           rel=colorbox6
                            target=_blank>
                             <img src="{{ url_for('static', filename='wadl.png') }}">
                         </a>
@@ -132,7 +138,8 @@
             </div>
             <div class="cright">
                 <div class="over mhkf">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox7
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                       rel=colorbox7
                        target=_blank>
                         <img src="{{ url_for('static', filename='mhkf.png') }}">
                     </a>
@@ -141,7 +148,8 @@
                     {% endfor %}
                 </div>
                 <div class="over yqfw">
-                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}" rel=colorbox8
+                    <a onfocus=this.blur() href="{{ url_for('static', filename=productname[0].productdetails[0]) }}"
+                       rel=colorbox8
                        target=_blank>
                         <img src="{{ url_for('static', filename='yqfw.png') }}">
                     </a>
@@ -152,10 +160,28 @@
             </div>
         </div>
     </div>
-    <div id="footer"></div>
+    <div class="clear"></div>
+    <div class="foot_guide">
+        <div class="foot_img01"><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='foot_title.png') }}"></a></div>
+        <div class="foot_content"><a href="{{ url_for('index') }}">安徽众媒数据科技有限公司<br/>Anhui Public Media Data Technology Co.Ltd.</a></div>
+        <div class="foot_img02">
+            <img src="{{ url_for('static', filename='foot_product.png') }}">
+
+            <div class="txt">
+                <span><a href="{{ url_for('profile') }}" style="color: transparent;">公司简介</a></span>
+                <span class="t"><a href="" style="color: transparent;">产品服务</a></span>
+                <span class="t"><a href="{{ url_for('talent') }}" style="color: transparent;">人才团队</a></span>
+                <span class="t"><a href="{{ url_for('projects') }}" style="color: transparent;">项目案例</a></span>
+                <span class="t"><a href="{{ url_for('agency') }}" style="color: transparent;">合作机构</a></span>
+                <span class="t"><a href="{{ url_for('contact') }}" style="color: transparent;">联系我们</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
 </div>
 <SCRIPT type=text/javascript>/*<![CDATA[*/
     if(!isMobile()){$(document).ready(function(){$("a[rel^='colorbox']").colorbox({title:" ",slideshow:true,slideshowAuto:false,previous:"上一张",next:"下一张",close:"关闭",slideshowStart:"播放",slideshowStop:"暂停",current:"第 {current} 张 (共{total}张)"});});}/*]]>*/
+
 
 </SCRIPT>
 </body>
