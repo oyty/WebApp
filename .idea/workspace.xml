@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6617476-b082-48fb-8bde-7f8bb1e46a10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/001.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/002.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/003.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/004.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/005.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/006.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/007.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/008.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/1ef7ea6559.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/46eae50db6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/69833ed09a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/6a884d6ef2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/8fe86226ff.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/94da4fb185.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/b05b0c6962.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/d04505fe96.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/ed57bce8c4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fe00425d0a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/foot_product.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/foot_project.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/foot_talent.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/jquery-2.1.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mk-3Dcarousel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mk-3Dcarousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/normalize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/foot_agency.png" afterPath="$PROJECT_DIR$/static/foot_agency.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/foot_contact.png" afterPath="$PROJECT_DIR$/static/foot_contact.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/foot_profile.png" afterPath="$PROJECT_DIR$/static/foot_profile.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/agency.css" afterPath="$PROJECT_DIR$/static/agency.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/agency.html" afterPath="$PROJECT_DIR$/templates/agency.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/common.css" afterPath="$PROJECT_DIR$/static/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/contact.css" afterPath="$PROJECT_DIR$/static/contact.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/contact.html" afterPath="$PROJECT_DIR$/templates/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/homepage.css" afterPath="$PROJECT_DIR$/static/homepage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/product.css" afterPath="$PROJECT_DIR$/static/product.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/product.html" afterPath="$PROJECT_DIR$/templates/product.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/profile.css" afterPath="$PROJECT_DIR$/static/profile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/profile.html" afterPath="$PROJECT_DIR$/templates/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/projects.css" afterPath="$PROJECT_DIR$/static/projects.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/projects.html" afterPath="$PROJECT_DIR$/templates/projects.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/talent.css" afterPath="$PROJECT_DIR$/static/talent.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/talent.html" afterPath="$PROJECT_DIR$/templates/talent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebApp.iws" />
@@ -85,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agency.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="agency.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/agency.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state vertical-scroll-proportion="-8.142858">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -99,6 +56,16 @@
                 <element signature="n#style#0;n#a#0;n#span#4;n#div#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#span#5;n#div#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14214464">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +119,17 @@
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="588" column="46" selection-start-line="588" selection-start-column="46" selection-end-line="588" selection-end-column="46" />
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,31 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frame.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/frame.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/common.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/projects.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -223,12 +180,10 @@
         <option value="$PROJECT_DIR$/templates/security/register_user.html" />
         <option value="$PROJECT_DIR$/templates/admin/index.html" />
         <option value="$PROJECT_DIR$/model/contact.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/views.py" />
         <option value="$PROJECT_DIR$/static/js.js" />
         <option value="$PROJECT_DIR$/static/frame.css" />
         <option value="$PROJECT_DIR$/static/homepage.css" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/mk-3Dcarousel.css" />
         <option value="$PROJECT_DIR$/static/product.css" />
         <option value="$PROJECT_DIR$/static/profile.css" />
@@ -244,6 +199,8 @@
         <option value="$PROJECT_DIR$/static/contact.css" />
         <option value="$PROJECT_DIR$/static/agency.css" />
         <option value="$PROJECT_DIR$/templates/agency.html" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -251,7 +208,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="1447" />
+    <option name="y" value="71" />
     <option name="width" value="1440" />
     <option name="height" value="832" />
   </component>
@@ -563,17 +521,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="832" extended-state="6" />
+    <frame x="1447" y="71" width="1440" height="832" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38513514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38409704" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2149401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15633424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15633424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19864865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -733,13 +691,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/my_master.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -790,13 +741,6 @@
     <entry file="file://$PROJECT_DIR$/static/homepage_body.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/custom.js">
@@ -946,14 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="588" column="46" selection-start-line="588" selection-start-column="46" selection-end-line="588" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7142856">
@@ -969,10 +905,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/agency.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state vertical-scroll-proportion="-8.142858">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -982,6 +934,14 @@
             <element signature="n#style#0;n#a#0;n#span#4;n#div#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#span#5;n#div#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14214464">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
